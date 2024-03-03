@@ -1,0 +1,32 @@
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border: solid;
+
+    padding: 2px;
+    margin: 2px;
+    
+}
+
+.movie-details {
+    margin-top: 20px;
+}
+
+.movie-details p {
+    margin-bottom: 10px;
+}
+
+.movie-details a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.movie-details a:hover {
+    background-color: #0056b3;
+}

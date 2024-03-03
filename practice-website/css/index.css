@@ -1,0 +1,17 @@
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.movie-container {
+    width: fit-content;
+    border: solid;
+    padding: 1vh;
+    margin: 1vh;
+}
+
+img {
+    width: 40vh;
+    height: 50vh;
+}
