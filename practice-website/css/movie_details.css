@@ -1,32 +1,40 @@
-.movie-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    border: solid;
-
-    padding: 2px;
-    margin: 2px;
-    
+/* SM LOGO CSS, it makes the logo small */
+#logo a {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
-.movie-details {
-    margin-top: 20px;
+#logo a img {
+    max-height: 24px !important;
+    margin: 0 !important; /* Remove margin */
+    padding-left: 12%;
+}
+/* SM LOGO CSS, it makes the logo small */
+
+.youtube-embed {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Standard aspect ratio for YouTube videos */
+    margin: 0 auto; /* Center the video */
+    border: 5px solid #424242;
+    border-radius: 5px;
+   }   
+
+
+   .movie-details {
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside the border */
+    margin-bottom: 20px; /* Space between details sections */
 }
 
 .movie-details p {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Space between each detail */
 }
 
 .movie-details a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    display: block; /* Make the button full width */
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Space above the button */
 }
 
-.movie-details a:hover {
-    background-color: #0056b3;
-}

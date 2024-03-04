@@ -27,3 +27,8 @@ img {
     margin: 0 !important; /* Remove margin */
     padding-left: 12%;
   }
+
+  .btn-block {
+   display: block;
+    width: 25%
+  }
