@@ -15,3 +15,15 @@ img {
     width: 40vh;
     height: 50vh;
 }
+
+#logo a {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  #logo a img {
+    max-height: 24px !important;
+    margin: 0 !important; /* Remove margin */
+    padding-left: 12%;
+  }
