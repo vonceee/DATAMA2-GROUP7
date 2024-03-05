@@ -1,4 +1,5 @@
-#### TODO:
+## TODO:
 ***
-css designs
-havent add the tbl_workers yet
+* ticket.php
+* debugging of software flow
+![Gusto ko na magpa-check](https://litter.catbox.moe/6yizxb.png)
