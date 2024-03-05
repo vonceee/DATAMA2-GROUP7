@@ -37,28 +37,15 @@ if (isset($_GET["id"])) {
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">                        
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">        
         <div class="container">
-        <div id="logo">
-            <a class="navbar-brand" href="#">
-                <img src="https://www.smsupermalls.com/themes/revamp2022/assets/img/logo.svg" class="d-inline-block align-top" alt="">
-            </a>
-        </div>
-      </div>    
-        <a class="navbar-brand" href="#">Movie Queue</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    
-                </ul>                
+            <div id="logo">
+                <a class="navbar-brand" href="#">
+                    <img src="https://www.smsupermalls.com/themes/revamp2022/assets/img/logo.svg" class="d-inline-block align-top" alt="">
+                </a>
             </div>
-
-      
-
-        </div>
+        <a class="navbar-brand ml-5" href="#">Movie Queue</a>        
+      </div>                    
     </nav>
 </header>
 

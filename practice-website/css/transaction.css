@@ -10,5 +10,9 @@
     margin: 0 !important; /* Remove margin */
     padding-left: 12%;
 }
-
 /* SM LOGO CSS, it makes the logo small */
+
+/* Navbar */
+.container {
+    justify-content: flex-start !important;  /* Resets justify-content to its default */
+}

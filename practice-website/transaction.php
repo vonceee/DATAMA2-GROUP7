@@ -57,45 +57,33 @@ if ($resultSeats && $resultSeats->num_rows > 0) {
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">                        
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">        
         <div class="container">
-        <div id="logo">
-            <a class="navbar-brand" href="#">
-                <img src="https://www.smsupermalls.com/themes/revamp2022/assets/img/logo.svg" class="d-inline-block align-top" alt="">
-            </a>
-        </div>
-      </div>    
-        <a class="navbar-brand" href="#">Movie Queue</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    
-                </ul>                
+            <div id="logo">
+                <a class="navbar-brand" href="#">
+                    <img src="https://www.smsupermalls.com/themes/revamp2022/assets/img/logo.svg" class="d-inline-block align-top" alt="">
+                </a>
             </div>
-
-      
-
-        </div>
+        <a class="navbar-brand ml-5" href="#">Movie Queue</a>        
+      </div>                    
     </nav>
 </header>
 
 
 <h1 class='text-center my-3'>Movie Name: <?php echo $movie['movie_name']; ?></h1>
 
-<div class="text-center px-5" >
+<div class="text-center px-5 mb-5" >
     <p style="color: white; font-size: 12vh; background-color: black;">MOVIE SCREEN</p>
 </div>
 
 
 <div class="container">
     <form id="paymentForm" action="payment_form.php" method="post">
+        <input type="hidden" name="movieId" value="<?php echo $movieId; ?>">
     <?php $count = 0; ?>
-    <div class="row">
+    <div class="row d-flex justify-content-center"> <!-- Added d-flex and justify-content-center here -->
         <?php foreach ($seats as $seat): ?>
-            <div class="col-md-3"> <!-- Adjust the column size as per your layout -->
+            <div class="col-md-1" > <!-- Adjust the column size as per your layout -->
                 <div class="seat form-check form-check-inline">
                     <input type="checkbox" id="seat-<?php echo $seat['seat_number']; ?>" name="selectedSeats[]" value="<?php echo $seat['seat_number']; ?>" class="form-check-input" <?php echo $seat['seat_status'] === 'booked' ? 'disabled' : ''; ?>>
                     <label for="seat-<?php echo $seat['seat_number']; ?>" class="form-check-label"><?php echo $seat['seat_number']; ?></label>
@@ -103,7 +91,7 @@ if ($resultSeats && $resultSeats->num_rows > 0) {
             </div>
             <?php if (++$count % 4 === 0): ?> <!-- Start a new row after every 4 seats -->
                 </div>
-                <div class="row">
+                <div class="row d-flex justify-content-center"> <!-- Added d-flex and justify-content-center here -->
             <?php endif; ?>
         <?php endforeach; ?>
     </div>

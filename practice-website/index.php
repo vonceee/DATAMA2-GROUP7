@@ -27,35 +27,25 @@ $result = $conn->query($sql)
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">                        
-        <div class="container">
-        <div id="logo">
-            <a class="navbar-brand" href="#">
-                <img src="https://www.smsupermalls.com/themes/revamp2022/assets/img/logo.svg" class="d-inline-block align-top" alt="">
-            </a>
-        </div>
-      </div>    
-        <a class="navbar-brand" href="#">Movie Queue</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    
-                </ul>                
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">        
+        <!-- Ovveride bootstrap default justify-content: space-between; -->
+        <div class="container " style="justify-content: flex-start;">
+        <!-- Ovveride bootstrap default justify-content: space-between; -->
+
+            <div id="logo">
+                <a class="navbar-brand" href="#">
+                    <img src="https://www.smsupermalls.com/themes/revamp2022/assets/img/logo.svg" class="d-inline-block align-top" alt="">
+                </a>
             </div>
-
+        <a class="navbar-brand ml-5" href="#">Movie Queue</a>        
         <!-- Admin Login Page Button -->
-        <button class="btn btn-outline-success btn-lg btn-block" onclick="window.location.href='login.php'">Admin View</button>
+        <button class="btn btn-outline-success btn-lg ml-auto" onclick="window.location.href='login.php'" id="adminLogin">Admin View</button>
         <!-- Admin Login Page Button -->
-
-        </div>
+      </div>                    
     </nav>
-</header>
+</header>                
     
-<div class="movies-grid justify-content-center my-5 ">
-    
+<div class="movies-grid justify-content-center my-5 ">    
 <?php
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
