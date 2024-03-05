@@ -1,0 +1,34 @@
+body {
+	margin: 2% auto;
+	max-width: 40%;
+	line-height: 1.6;
+    font-size: 1.6rem;
+    padding: 0 1.45%;
+}
+
+.form-group {
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+/* Pinapalaki yung text sa textbox */
+.form-control {
+    font-size: 1.4rem;
+}
+/* Pinapalaki yung text sa textbox */
+
+
+/* SM LOGO CSS, it makes the logo small */
+#logo a {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#logo a img {
+    max-height: 24px !important;
+    margin: 0 !important; /* Remove margin */
+    padding-left: 12%;
+}
+
+/* SM LOGO CSS, it makes the logo small */

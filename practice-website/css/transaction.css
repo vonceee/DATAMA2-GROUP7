@@ -1,0 +1,18 @@
+/* SM LOGO CSS, it makes the logo small */
+#logo a {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#logo a img {
+    max-height: 24px !important;
+    margin: 0 !important; /* Remove margin */
+    padding-left: 12%;
+}
+/* SM LOGO CSS, it makes the logo small */
+
+/* Navbar */
+.container {
+    justify-content: flex-start !important;  /* Resets justify-content to its default */
+}

@@ -37,50 +37,68 @@ if (isset($_GET["id"])) {
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">        
         <div class="container">
-            <a class="navbar-brand" href="#">Movie Queue</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.php">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact</a>
-                    </li>
-                </ul>
+            <div id="logo">
+                <a class="navbar-brand" href="#">
+                    <img src="https://www.smsupermalls.com/themes/revamp2022/assets/img/logo.svg" class="d-inline-block align-top" alt="">
+                </a>
             </div>
-        </div>
+        <a class="navbar-brand ml-5" href="#">Movie Queue</a>        
+      </div>                    
     </nav>
 </header>
 
-<div class="movie-grid">
-    <div class="col-md-8">
-        <?php
-        $youtubeVideoId = $movie['youtube_trailer'];
-        echo '<iframe width="50%" height="315" src="https://www.youtube.com/embed/' . $youtubeVideoId . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-        ?>
+<div class="container d-flex align-items-center" style="height: 90vh;">
+    <div class="row justify-content-center">
+        <div class="col-md-6 my-4">
+            <?php
+            $youtubeVideoId = $movie['youtube_trailer'];
+            echo '<iframe width="100%" class="youtube-embed" height="315" src="https://www.youtube.com/embed/' . $youtubeVideoId . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display: block; margin: 0 auto;"></iframe>';
+            ?>
+        </div>
+        <div class="col-md-6">
+            <div class="card border rounded-3 shadow">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Movie Details</h5>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td class="fw-bold">Movie Name</td>
+                            <td><?php echo $movie['movie_name']; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Movie Rating</td>
+                            <td><?php echo $movie['movie_rating']; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Release Date</td>
+                            <td><?php echo $movie['release_date']; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Run Time</td>
+                            <td><?php echo $movie['run_time']; ?> minutes</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Genre</td>
+                            <td><?php echo $movie['genre']; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Price</td>
+                            <td>$<?php echo $movie['price']; ?></td>
+                        </tr>
+                    </table>
+                    <div class="text-center">
+                        <a href="transaction.php?id=<?php echo $movie['id']; ?>" class="btn btn-primary">Watch Movie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 
-<div class="movie-grid">
-    <div class="col-md-4 movie-details">
-        <p>Movie Name: <?php echo $movie['movie_name']; ?></p>
-        <p>Movie Rating: <?php echo $movie['movie_rating']; ?></p>
-        <p>Release Date: <?php echo $movie['release_date']; ?></p>
-        <p>Run Time: <?php echo $movie['run_time']; ?> minutes</p>
-        <p>Genre: <?php echo $movie['genre']; ?></p>
-        <p>Price: $<?php echo $movie['price']; ?></p>
-        <a href="transaction.php?id=<?php echo $movie['id']; ?>">Watch Movie</a>
-    </div>
-</div>
+
+
 
 </body>
 </html>
