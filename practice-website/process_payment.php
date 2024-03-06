@@ -57,6 +57,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("iiss", $customerId, $movieId, $selectedSeatsString, $selectedTime);
     $stmt->execute();
 
+    // Retrieve UID from transaction_reference column
+    $sql = "SELECT transaction_reference FROM tbl_reservations WHERE customer_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $customerId);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $transaction = $result->fetch_assoc();
+    $transactionReference= $transaction['transaction_reference'];
+
     // After successfully inserting the reservation and updating the seats
     $_SESSION["customerId"] = $customerId;
     $_SESSION["movieId"] = $movieId;
@@ -65,6 +74,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION["firstName"] = $firstName;
     $_SESSION["lastName"] = $lastName;
     $_SESSION["email"] = $email;
+    $_SESSION["transactionReference"] = $transactionReference;
+
+
 
     // Redirect to ticket.php
     header("Location: ticket.php");

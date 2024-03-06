@@ -98,6 +98,7 @@ if ($result->num_rows > 0) {
         </div>
     </div>
     </div>
+    <!-- Submit Button To be Centered -->
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -131,15 +132,6 @@ if ($result->num_rows > 0) {
     </div>
   </div>
 </div>
-
-
-
-<!-- Submit Button -->
-
-
-
-
-
 
 </body>
 </html>
