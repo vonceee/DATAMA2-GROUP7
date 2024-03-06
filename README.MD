@@ -1,5 +1,5 @@
 ## TODO:
-* ticket.php
+~~* ticket.php~~
 * debugging of software flow
 
-![Gusto ko na magpa-check](https://litter.catbox.moe/6yizxb.png)
+![Gusto ko na magpa-check](https://i.kym-cdn.com/photos/images/original/001/311/626/f27.png)
